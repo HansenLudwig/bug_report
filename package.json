@@ -10,16 +10,21 @@
     "express": "^4"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^1"
+    "@cap-js/sqlite": "^1",
+    "@sap/ux-specification": "^1.120.12"
   },
   "cds": {
     "folders": {
-       "db": "db/",
-       "srv": "srv/",
-       "app": "app/"
+      "db": "db/",
+      "srv": "srv/",
+      "app": "app/"
     }
   },
   "scripts": {
-    "start": "cds-serve"
-  }
+    "start": "cds-serve",
+    "watch-temp01": "cds watch --open temp01/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "sapux": [
+    "app/temp01"
+  ]
 }
