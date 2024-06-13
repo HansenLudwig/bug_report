@@ -1,4 +1,13 @@
 using CatalogService as service from '../../db/cat-service';
+
+annotate service.Books with @UI.SelectionFields: [
+    bookID,
+    title,
+    descr,
+    author_name,
+];
+
+
 annotate service.Books with @(
     UI.FieldGroup #GeneratedGroup : {
         $Type : 'UI.FieldGroupType',
@@ -6,7 +15,7 @@ annotate service.Books with @(
             {
                 $Type : 'UI.DataField',
                 Label : 'ID',
-                Value : ID,
+                Value : bookID,
             },
             {
                 $Type : 'UI.DataField',
@@ -21,12 +30,7 @@ annotate service.Books with @(
             {
                 $Type : 'UI.DataField',
                 Label : 'author',
-                Value : author,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'genre_ID',
-                Value : genre_ID,
+                Value : author_name,
             },
             {
                 $Type : 'UI.DataField',
@@ -34,14 +38,9 @@ annotate service.Books with @(
                 Value : stock,
             },
             {
-                $Type : 'UI.DataField',
-                Label : 'price',
-                Value : price,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'currency_code',
-                Value : currency_code,
+                $Type: 'UI.DataFieldForAction',
+                Label: 'Bug here',
+                Action: 'CatalogService.show_bug'
             },
         ],
     },
@@ -54,31 +53,36 @@ annotate service.Books with @(
         },
     ],
     UI.LineItem : [
-        {
-            $Type : 'UI.DataField',
-            Label : 'ID',
-            Value : ID,
-        },
-        {
-            $Type : 'UI.DataField',
-            Label : 'title',
-            Value : title,
-        },
-        {
-            $Type : 'UI.DataField',
-            Label : 'descr',
-            Value : descr,
-        },
-        {
-            $Type : 'UI.DataField',
-            Label : 'author',
-            Value : author,
-        },
-        {
-            $Type : 'UI.DataField',
-            Label : 'genre_ID',
-            Value : genre_ID,
-        },
+            {
+                $Type : 'UI.DataField',
+                Label : 'ID',
+                Value : bookID,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'title',
+                Value : title,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'descr',
+                Value : descr,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'author',
+                Value : author_name,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'stock',
+                Value : stock,
+            },
+            {
+                $Type: 'UI.DataFieldForAction',
+                Label: 'Bug here',
+                Action: 'CatalogService.show_bug'
+            },
     ],
 );
 
