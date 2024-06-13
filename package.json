@@ -1,0 +1,25 @@
+{
+  "name": "bug_report",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1"
+  },
+  "cds": {
+    "folders": {
+       "db": "db/",
+       "srv": "srv/",
+       "app": "app/"
+    }
+  },
+  "scripts": {
+    "start": "cds-serve"
+  }
+}
