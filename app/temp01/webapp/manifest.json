@@ -24,6 +24,30 @@
           "odataVersion": "4.0"
         }
       }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "BugReport_Dropdown":{
+          "semanticObject": "BugReport_Dropdown",
+          "action": "view",
+          "title": "{{flpTitle}}",
+          "subTitle": "{{flpsubTitleStatusOpenedRecon}}",
+          "signature":{
+            "parameters":{
+              "bookID": {
+                "defaultValue": { "format": "plain", "value": "" }
+              }
+            },
+            "additionalParameters": "allowed"
+          },
+          "indicatorDataSource":{
+            "dataSource": "mainService",
+            "path": "Books?$count=true&$select=ID,author_name,bookID,descr,stock,title&$skip=0&$top=30"
+          },
+          "hideLauncher": false
+        }
+      },
+      "outbounds": {}
     }
   },
   "sap.ui": {

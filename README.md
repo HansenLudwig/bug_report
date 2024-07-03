@@ -1,25 +1,11 @@
 # Getting Started
 
-Welcome to your new project.
-
-It contains these folders and files, following our recommended project layout:
-
-File or Folder | Purpose
----------|----------
-`app/` | content for UI frontends goes here
-`db/` | your domain models and data go here
-`srv/` | your service models and code go here
-`package.json` | project metadata and configuration
-`readme.md` | this getting started guide
+- Run `npm run start`.
+- Open the server's page with your browser at url: `http://localhost:4004`
+- Open Web Applications `/temp01/webapp`, press `go` at the filter-bar.
+- Select one of the item in the list, then press button of `Bug here`.
 
 
-## Next Steps
+## ISSUE
 
-- Open a new terminal and run `cds watch`
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
-
-
-## Learn More
-
-Learn more at https://cap.cloud.sap/docs/get-started/.
+Please check file .\db\cat-service.cds, line 54-63.
