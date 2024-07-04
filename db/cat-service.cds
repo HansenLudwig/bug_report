@@ -56,7 +56,7 @@ extend entity CatalogService.Books with actions {
                           //   this should work to hide other columns according to
                           //   https://sapui5.hana.ondemand.com/sdk/#/topic/a5608eabcc184aee99e1a7d88b28816c.html
                           {
-                            $Type            : 'Common.ValueListParameterInOut', // This is not working correctly in value helps.
+                            $Type            : 'Common.ValueListParameterOut', // This is not working correctly in value helps.
                             // $Type            : 'Common.ValueListParameterDisplayOnly',
                             ValueListProperty: 'authorID',
                             LocalDataProperty: author_ID,
